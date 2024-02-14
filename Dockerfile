@@ -42,7 +42,7 @@ RUN echo -e '\necho -e "\n\033[1;32m############################################
          'echo -e "\033[0m  \033[0m"\n' \
          'echo -e "\033[0m  You can run the Jupyter Notebook by running the command:                              \033[0m"\n' \
          'echo -e "\033[0m \033[0m"\n' \
-         'echo -e "\033[0m  >    jupyter notebook --ip 0.0.0.0 --no-browser --allow-root   \033[0m"\n' \
+         'echo -e "\033[0m  >    jupyter lab --ip 0.0.0.0 --no-browser --allow-root   \033[0m"\n' \
          'echo -e "\033[0m                                              \033[0m"\n' \
          'echo -e "\033[0m  It can then be accessed on 'localhost:8888' on your browser.                                            \033[0m"\n' \
          'echo -e "\033[0m  (The required token is in the output of                                            \033[0m"\n' \
