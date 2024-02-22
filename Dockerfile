@@ -9,10 +9,14 @@ RUN apt-get update && \
     apt-get install -y curl && \
     apt-get install -y python3 && \
     apt-get install -y python3-pip && \
-    apt-get install -y openjdk-11-jdk && \
+    apt-get install -y openjdk-11-jdk-headless && \
     pip3 install jupyter && \
+    pip3 install findspark && \
+    wget https://archive.apache.org/dist/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz && \
+    tar xf spark-3.3.1-bin-hadoop3.tgz && \
     # Clean up
     apt-get clean && \
+    rm -rf spark-3.3.1-bin-hadoop3.tgz && \
     rm -rf /var/lib/apt/lists/*
 
 
