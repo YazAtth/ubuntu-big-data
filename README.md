@@ -20,6 +20,10 @@ Then use your browser to go to [http://localhost:8888/](http://localhost:8888/) 
 
 ## Notes
 
+Spark and Java environment variables have been set so there is no need to do that like there was for google colab
+
+---
+
 You can safely ignore this warning: 
 ```
 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable

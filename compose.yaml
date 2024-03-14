@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  big-data-project:
+#    if you ever need to do ad-hoc changes to the dockerfile, uncomment below line and comment out image
+#    build: .
+    image: ghcr.io/yazatth/ubuntu-big-data:latest
+    container_name: big-data-spark
+    volumes:
+      - project_data:/workdir
+
+    # ensure you are running docker compose from project root or change the source filepath
+    command: ["bash", "-c", "cp -R ./data/. /projectdir/"]
+
+    ports:
+      - "8888:8888"
+    tty: true
+
+volumes:
+  project_data:
