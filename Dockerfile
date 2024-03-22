@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y curl vim wget software-properties-common ssh net-tools ca-certificates python3 python3-pip python3-numpy python3-matplotlib python3-scipy python3-pandas
 RUN pip3 install jupyter && \
-    pip3 install findspark
+    pip3 install findspark pyarrow
 
 RUN update-alternatives --install "/usr/bin/python" "python" "$(which python3)" 1
 
@@ -40,8 +40,8 @@ COPY README.md /project
 
 # not needed anymore (lab4 for testing spark functionality)
 #RUN mkdir lab3
-#COPY lab_03.ipynb /workdir/lab3
-#COPY lab3_config.sh /workdir/lab3
+#COPY lab_03.ipynb /project/lab3
+#COPY lab3_config.sh /project/lab3
 RUN mkdir lab4
 COPY lab_04.ipynb /project/lab4
 
